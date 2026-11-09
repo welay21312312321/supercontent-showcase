@@ -8,7 +8,7 @@ const SOURCE_FILES = ["shell.html","style.css","deck.css","app.js","deck.js","lo
 
 const EDITORIAL = ["assets/editorial/douyin.webp","assets/editorial/xiaohongshu.webp","assets/editorial/tiktok.webp","assets/editorial/qianchuan.webp","assets/editorial/v14-d-frame-1.webp","assets/editorial/v14-d-frame-2.webp","assets/editorial/v14-d-frame-3.webp","assets/editorial/v14-o-frame-1.webp","assets/editorial/v14-o-frame-2.webp","assets/editorial/v14-o-frame-3.webp","assets/editorial/v14-c-frame-1.webp","assets/editorial/v14-c-frame-2.webp","assets/editorial/v14-c-frame-3.webp"];
 
-const BRAND = ["assets/science-stage/clipo-logo.png","assets/science-stage/favicon.svg"];
+const BRAND = ["assets/science-stage/clipo-logo.png","assets/science-stage/favicon.svg","assets/science-stage/mascot-head.png"];
 
 function removeViewportWidthRules(source) {
   let result = '', cursor = 0;
