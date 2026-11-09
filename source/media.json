@@ -56,6 +56,22 @@
       "date": "2026-11-09 创意Demo · 非客户效果案例",
       "status": "创意Demo · 非客户效果案例",
       "publicNote": "完整创意演示原片并保留原声，不扩大为已履约或投后效果。"
+    },
+    {
+      "id": "W-AIGC-STORY",
+      "label": "AIGC剧情｜暖色生活场景",
+      "summary": "来自现有案例库归档，原文件完整展示。",
+      "date": "2026.11.10归档读取",
+      "status": "作品归档",
+      "publicNote": "用于创意表现展示，不引用单片传播或成交效果。"
+    },
+    {
+      "id": "W-OFFICIAL",
+      "label": "品牌官号｜春日IP创意",
+      "summary": "来自现有案例库归档，原文件完整展示。",
+      "date": "2026.11.10归档读取",
+      "status": "作品归档",
+      "publicNote": "用于创意表现展示，不引用单片传播或成交效果。"
     }
   ],
   "works": [
@@ -163,6 +179,36 @@
       "width": 356,
       "height": 640,
       "sourceId": "W-MOBILITY"
+    },
+    {
+      "id": "work-aigc-story",
+      "scenarioId": "domestic",
+      "title": "AIGC剧情｜暖色生活场景",
+      "description": "以纯AIGC构建生活场景与剧情表达。",
+      "deliveryStatus": "AIGC作品归档",
+      "caption": "完整归档作品 · 保留原声",
+      "batchNote": "作品展示",
+      "src": "assets/real-work/work-aigc-story.mp4",
+      "poster": "assets/real-work/work-aigc-story.jpg",
+      "duration": 25.980998,
+      "width": 360,
+      "height": 640,
+      "sourceId": "W-AIGC-STORY"
+    },
+    {
+      "id": "work-official",
+      "scenarioId": "domestic",
+      "title": "品牌官号｜春日IP创意",
+      "description": "纯AIGC品牌IP创意，展示季节氛围与角色表达。",
+      "deliveryStatus": "品牌官号内容归档",
+      "caption": "完整归档作品 · 保留原声",
+      "batchNote": "作品展示",
+      "src": "assets/real-work/work-official.mp4",
+      "poster": "assets/real-work/work-official.jpg",
+      "duration": 8.799002,
+      "width": 368,
+      "height": 640,
+      "sourceId": "W-OFFICIAL"
     }
   ]
 }
