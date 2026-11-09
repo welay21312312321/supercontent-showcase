@@ -4,7 +4,7 @@
     "kicker": "TEZIGN / SUPERCONTENT",
     "positioning": "特赞的 AI Native 内容团队",
     "tagline": "品牌内容，从策划到成批交付。",
-    "version": "v0.4.24",
+    "version": "v0.4.25",
     "date": "2026-10-29",
     "scopeNote": "依据客户原档、生产需求、经营记录、周报与近月会议整理；匿名数字保留统计范围，方法标准按本次合作约定。",
     "brand": "SuperContent Clipo内容服务团队",
@@ -1998,5 +1998,136 @@
     "checkedDate": "2026.11.09",
     "currency": "USD",
     "sourceId": "O-CPM"
+  },
+  "scenarioGalleries": {
+    "domestic": {
+      "title": "行业不同，好内容各有一套。",
+      "lead": "从数码、厨电到出行、农资与快消，把产品讲进不同人的生活。",
+      "kicker": "DOMESTIC / SELECTED WORKS",
+      "cards": [
+        {
+          "workId": "work-domestic-hook",
+          "sector": "智能终端",
+          "client": "某智能终端品牌",
+          "format": "拟人反转"
+        },
+        {
+          "workId": "work-official",
+          "sector": "厨电",
+          "client": "某厨电品牌",
+          "format": "品牌IP"
+        },
+        {
+          "workId": "work-gallery-domestic-03",
+          "sector": "出行",
+          "client": "某出行品牌",
+          "format": "AIGC产品场景"
+        },
+        {
+          "workId": "work-gallery-domestic-04",
+          "sector": "农业科技",
+          "client": "某农业科技品牌",
+          "format": "动画科普"
+        },
+        {
+          "workId": "work-gallery-domestic-05",
+          "sector": "饮料",
+          "client": "某饮料品牌",
+          "format": "运动创意"
+        },
+        {
+          "workId": "work-gallery-domestic-06",
+          "sector": "家清",
+          "client": "某家清品牌",
+          "format": "氛围视觉"
+        }
+      ]
+    },
+    "overseas": {
+      "title": "不同国家，都有自己的内容语感。",
+      "lead": "剧情、生活场景与产品演示，让不同品类在海外各自讲得通。",
+      "kicker": "OVERSEAS / SELECTED WORKS",
+      "cards": [
+        {
+          "workId": "work-gallery-overseas-01",
+          "sector": "智能终端",
+          "client": "某智能终端品牌",
+          "format": "俄罗斯剧情"
+        },
+        {
+          "workId": "work-gallery-overseas-02",
+          "sector": "家电",
+          "client": "某家电品牌",
+          "format": "东盟生活场景"
+        },
+        {
+          "workId": "work-gallery-overseas-03",
+          "sector": "汽车",
+          "client": "某汽车品牌",
+          "format": "当地口播"
+        },
+        {
+          "workId": "work-gallery-overseas-04",
+          "sector": "家居",
+          "client": "某家居品牌",
+          "format": "产品演示"
+        },
+        {
+          "workId": "work-gallery-overseas-05",
+          "sector": "护肤",
+          "client": "某护肤品牌",
+          "format": "TikTok Shop"
+        },
+        {
+          "workId": "work-gallery-overseas-06",
+          "sector": "身体护理",
+          "client": "某身体护理品牌",
+          "format": "使用场景"
+        }
+      ]
+    },
+    "conversion": {
+      "title": "不同产品，拆出不同的购买理由。",
+      "lead": "产品功能、使用情境、痛点开场与服务体验，给创意测试更多选择。",
+      "kicker": "COMMERCE / SELECTED WORKS",
+      "cards": [
+        {
+          "workId": "work-gallery-conversion-01",
+          "sector": "电池",
+          "client": "某电池品牌",
+          "format": "产品功能"
+        },
+        {
+          "workId": "work-gallery-conversion-02",
+          "sector": "宠物服务",
+          "client": "某宠物服务品牌",
+          "format": "门店体验"
+        },
+        {
+          "workId": "work-gallery-conversion-03",
+          "sector": "粮油",
+          "client": "某粮油品牌",
+          "format": "厨房场景"
+        },
+        {
+          "workId": "work-gallery-conversion-04",
+          "sector": "护肤",
+          "client": "某护肤品牌",
+          "format": "卖点演示"
+        },
+        {
+          "workId": "work-gallery-conversion-05",
+          "sector": "男士护理",
+          "client": "某男士护理品牌",
+          "format": "反认知开场"
+        },
+        {
+          "workId": "work-gallery-conversion-06",
+          "sector": "口腔护理",
+          "client": "某口腔护理品牌",
+          "format": "节奏混剪"
+        }
+      ]
+    }
   }
 }
