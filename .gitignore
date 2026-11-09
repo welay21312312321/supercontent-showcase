@@ -1,0 +1,11 @@
+.DS_Store
+AGENTS.md
+.codex-product/
+private-media/
+research/
+evidence/
+*.log
+*.tar.gz
+node_modules/
+.env
+.env.*
