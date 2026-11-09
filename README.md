@@ -6,7 +6,9 @@
 
 - 文案：`source/content.json`
 - 已公开的作品信息：`source/media.json`
+- 英文词典：`source/locale-en.json`（中文原文为键，英文译文为值）
 - 页面与交互：`source/shell.html`、`source/app.js`、`source/deck.js`
+- 中英文切换逻辑：`source/locale.js`
 - 样式：`source/style.css`、`source/deck.css`
 - 视频与图片：`assets/`
 

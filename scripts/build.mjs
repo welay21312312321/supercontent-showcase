@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve, relative, isAbsolute, parse, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 
-const SOURCE_FILES = ["shell.html","style.css","deck.css","app.js","deck.js"];
+const SOURCE_FILES = ["shell.html","style.css","deck.css","app.js","deck.js","locale.js","catalog.css"];
 
 const EDITORIAL = ["assets/editorial/douyin.webp","assets/editorial/xiaohongshu.webp","assets/editorial/tiktok.webp","assets/editorial/qianchuan.webp","assets/editorial/v14-d-frame-1.webp","assets/editorial/v14-d-frame-2.webp","assets/editorial/v14-d-frame-3.webp","assets/editorial/v14-o-frame-1.webp","assets/editorial/v14-o-frame-2.webp","assets/editorial/v14-o-frame-3.webp","assets/editorial/v14-c-frame-1.webp","assets/editorial/v14-c-frame-2.webp","assets/editorial/v14-c-frame-3.webp"];
 
@@ -32,6 +32,10 @@ function removeViewportWidthRules(source) {
 function publicJson(value) {
   return JSON.stringify(value).replace(/</g, '\\u003c').replace(/>/g, '\\u003e')
     .replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
+}
+
+function localeJson(value) {
+  return JSON.stringify(value).replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
 }
 
 function assertPublicText(text, label) {
@@ -80,22 +84,25 @@ function runtimeAssets(media) {
   return [...assets, ...EDITORIAL, ...BRAND];
 }
 
-function buildHtml(parts, content, media) {
+function buildHtml(parts, content, media, locale) {
   for (const [label, text] of Object.entries(parts)) assertPublicText(text, label);
-  for (const [label, payload] of [['content.json', content], ['media.json', media]]) {
+  if (!locale || typeof locale !== 'object' || Array.isArray(locale) || !Object.keys(locale).length || !Object.values(locale).every(value => typeof value === 'string')) throw new Error('locale-en.json must be a non-empty string dictionary.');
+  for (const [label, payload] of [['content.json', content], ['media.json', media], ['locale-en.json', locale]]) {
     validatePayloadKeys(payload, label);
     assertPublicText(JSON.stringify(payload), label);
   }
-  const markers = ['/* INLINE_CSS */', '/* INLINE_DATA */', '/* INLINE_MEDIA */', '/* INLINE_JS */'];
+  const markers = ['/* INLINE_CSS */', '/* INLINE_DATA */', '/* INLINE_MEDIA */', '/* INLINE_LOCALE_DATA */', '/* INLINE_JS */'];
   for (const marker of markers) if (parts['shell.html'].split(marker).length !== 2) throw new Error(`shell.html must contain exactly one ${marker}.`);
   if (parts['app.js'].split('/* INLINE_DECK */').length !== 2) throw new Error('app.js must contain exactly one inline deck marker.');
+  if (parts['app.js'].split('/* INLINE_LOCALE */').length !== 2) throw new Error('app.js must contain exactly one inline locale marker.');
   if (/INLINE_DESIGN|design-data|compiled-copy/.test(parts['shell.html'] + parts['app.js'] + parts['deck.js'])) throw new Error('Retired PPT-copy runtime is still present.');
-  const css = removeViewportWidthRules(parts['style.css']) + '\n' + parts['deck.css'];
-  const js = parts['app.js'].replace('/* INLINE_DECK */', () => parts['deck.js']);
+  const css = removeViewportWidthRules(parts['style.css']) + '\n' + parts['deck.css'] + '\n' + parts['catalog.css'];
+  const js = parts['app.js'].replace('/* INLINE_DECK */', () => parts['deck.js']).replace('/* INLINE_LOCALE */', () => parts['locale.js']);
   const html = parts['shell.html']
     .replace('/* INLINE_CSS */', () => css)
     .replace('/* INLINE_DATA */', () => publicJson(content))
     .replace('/* INLINE_MEDIA */', () => publicJson(media))
+    .replace('/* INLINE_LOCALE_DATA */', () => localeJson(locale))
     .replace('/* INLINE_JS */', () => js);
   assertPublicText(html, 'Runtime HTML');
   if (/\/\* INLINE_[A-Z_]+ \*\//.test(html)) throw new Error('Unresolved inline runtime marker.');
@@ -135,13 +142,13 @@ async function safeTarget(dest, name) {
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 try {
   const parts = Object.fromEntries(await Promise.all(SOURCE_FILES.map(async name => [name, await readFile(join(root, 'source', name), 'utf8')])));
-  const [content, media] = await Promise.all(['content.json', 'media.json'].map(async name => JSON.parse(await readFile(join(root, 'source', name), 'utf8'))));
-  const html = buildHtml(parts, content, media);
+  const [content, media, locale] = await Promise.all(['content.json', 'media.json', 'locale-en.json'].map(async name => JSON.parse(await readFile(join(root, 'source', name), 'utf8'))));
+  const html = buildHtml(parts, content, media, locale);
   const assets = runtimeAssets(media);
   for (const asset of assets) await assertRegularFile(join(root, asset));
   const targets = await Promise.all(['index.html', 'SuperContent.html'].map(name => safeTarget(root, name)));
   for (const target of targets) await writeFile(target, html);
-  console.log(JSON.stringify({ output: ['index.html', 'SuperContent.html'], htmlBytes: Buffer.byteLength(html), htmlSha256: createHash('sha256').update(html).digest('hex'), works: media.works.length, assets: assets.length, externalDependencies: 0 }, null, 2));
+  console.log(JSON.stringify({ output: ['index.html', 'SuperContent.html'], htmlBytes: Buffer.byteLength(html), htmlSha256: createHash('sha256').update(html).digest('hex'), works: media.works.length, assets: assets.length, localeEntries: Object.keys(locale).length, externalDependencies: 0 }, null, 2));
 } catch (error) {
   console.error('Build failed: ' + error.message);
   process.exitCode = 1;

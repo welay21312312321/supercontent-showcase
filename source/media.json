@@ -7,7 +7,7 @@
       "summary": "原片来自内容生产排期，同一记录含作品附件，状态为已交付。",
       "date": "2026-06-30交付记录",
       "status": "内部交付记录",
-      "publicNote": "展示版做了品牌标识处理、节选和静音。本片未与6,800条累计记录逐支对应；不据此宣称单片验收或传播效果。"
+      "publicNote": "展示完整归档原片并保留原声；页面文字保持客户脱敏。本片未与6,800条累计记录逐支对应；不据此宣称单片验收或传播效果。"
     },
     {
       "id": "O-M01",
@@ -15,7 +15,7 @@
       "summary": "原片收录在历史海外内容案例文档，采用生活问题、功能混剪和当地语言表达。",
       "date": "历史项目归档，单支交付日期未注明",
       "status": "历史项目成片",
-      "publicNote": "展示版为脱敏静音节选。本片与六国汇总未逐支对应；历史档案存在不等于本片已获客户终验。"
+      "publicNote": "展示完整归档原片并保留原声；页面文字保持客户脱敏。本片与六国汇总未逐支对应；历史档案存在不等于本片已获客户终验。"
     },
     {
       "id": "C-M01",
@@ -23,31 +23,31 @@
       "summary": "原片列在原项目文档“50条交付视频部分成片展示”中，对应电商短视频内容。",
       "date": "2025.04.14—17原文栏目",
       "status": "历史交付展示",
-      "publicNote": "展示版做了品牌标识处理、节选和静音。本片未与382条阶段统计逐支对应；不据此推算成交或ROI。"
+      "publicNote": "展示完整归档原片并保留原声；页面文字保持客户脱敏。本片未与382条阶段统计逐支对应；不据此推算成交或ROI。"
     },
     {
       "id": "W-PET",
       "label": "宠物零售｜门店与产品展示",
-      "summary": "通用门店场景与产品陈列的脱敏节选。",
+      "summary": "门店实拍与产品陈列的完整归档作品。",
       "date": "2026-11-09 案例库归档作品 · 源日期未标明",
       "status": "案例库归档作品 · 源日期未标明",
-      "publicNote": "客户直接名称所在镜头已截去；不与发布或效果汇总对应。 2.917s Silent excerpt."
+      "publicNote": "展示完整归档原片并保留原声；页面文字保持客户脱敏，不与发布或效果汇总对应。"
     },
     {
       "id": "W-FOOD",
       "label": "食品饮料｜数字人口播",
-      "summary": "食品科普口播的归档作品节选，保留AI生成标识。",
+      "summary": "食品科普口播的完整归档作品，保留AI生成标识。",
       "date": "2026-11-09 案例库归档作品 · 源日期未标明",
       "status": "案例库归档作品 · 源日期未标明",
-      "publicNote": "节选不含直接客户名；不引用源内容中的具体事件作为本方案事实。 3.833s Silent excerpt."
+      "publicNote": "展示完整归档原片并保留原声；页面文字保持客户脱敏，不引用源内容中的具体事件作为本方案事实。"
     },
     {
       "id": "W-BEAUTY",
       "label": "美妆个护｜AIGC产品场景",
-      "summary": "花卉与产品场景的AIGC归档作品节选，品牌文字已处理。",
+      "summary": "花卉与产品场景的完整AIGC归档作品。",
       "date": "2026-11-09 案例库归档作品 · 源日期未标明",
       "status": "案例库归档作品 · 源日期未标明",
-      "publicNote": "顶部品牌文字裁去，瓶身直接名称处理；产品外观保留。 8.0s Silent excerpt."
+      "publicNote": "展示完整归档原片并保留原声；页面文字保持客户脱敏，视频保留原有产品与品牌画面。"
     },
     {
       "id": "W-MOBILITY",
@@ -55,23 +55,23 @@
       "summary": "古诗、水墨与骑行结合的AIGC创意样片。",
       "date": "2026-11-09 创意Demo · 非客户效果案例",
       "status": "创意Demo · 非客户效果案例",
-      "publicNote": "明确为创意演示，不扩大为已履约或投后效果。 7.792s Silent excerpt."
+      "publicNote": "完整创意演示原片并保留原声，不扩大为已履约或投后效果。"
     }
   ],
   "works": [
     {
       "id": "work-domestic",
       "scenarioId": "domestic",
-      "title": "国内矩阵｜新品内容片段",
+      "title": "国内矩阵｜新品内容作品",
       "description": "把产品信息、拍摄片段和节奏混剪，做成账号短视频。",
       "deliveryStatus": "交付排期标记已交付 · 2026-06-30",
-      "caption": "脱敏展示片段 · 静音",
+      "caption": "完整原片 · 保留原声",
       "batchNote": "这支作品未与下方统计逐条对应。",
       "src": "assets/real-work/work-domestic.mp4",
       "poster": "assets/real-work/work-domestic.jpg",
-      "duration": 8.2,
-      "width": 720,
-      "height": 1280,
+      "duration": 16.811,
+      "width": 1080,
+      "height": 1920,
       "sourceId": "D-M01"
     },
     {
@@ -80,11 +80,11 @@
       "title": "海外矩阵｜当地表达与功能混剪",
       "description": "用生活问题引入，再接产品功能画面与当地语言字幕。",
       "deliveryStatus": "历史项目成片 · 海外案例归档",
-      "caption": "脱敏展示片段 · 静音",
+      "caption": "完整原片 · 保留原声",
       "batchNote": "这支作品未与下方统计逐条对应。",
       "src": "assets/real-work/work-overseas.mp4",
       "poster": "assets/real-work/work-overseas.jpg",
-      "duration": 18,
+      "duration": 47.437,
       "width": 1280,
       "height": 720,
       "sourceId": "O-M01"
@@ -95,11 +95,11 @@
       "title": "电商转化｜产品特点与使用场景",
       "description": "从日常使用情境切入，用具体画面说明产品特点。",
       "deliveryStatus": "历史交付展示 · 2025.04.14—17",
-      "caption": "脱敏展示片段 · 静音",
+      "caption": "完整原片 · 保留原声",
       "batchNote": "这支作品未与下方统计逐条对应。",
       "src": "assets/real-work/work-commerce.mp4",
       "poster": "assets/real-work/work-commerce.jpg",
-      "duration": 5,
+      "duration": 21.88,
       "width": 720,
       "height": 1280,
       "sourceId": "C-M01"
@@ -108,13 +108,13 @@
       "id": "work-pet",
       "scenarioId": "domestic",
       "title": "宠物零售｜门店与产品展示",
-      "description": "通用门店场景与产品陈列的脱敏节选。",
+      "description": "门店实拍与产品陈列的完整归档作品。",
       "deliveryStatus": "案例库归档作品 · 源日期未标明",
-      "caption": "实拍内容 · 静音节选",
-      "batchNote": "客户直接名称所在镜头已截去；不与发布或效果汇总对应。",
+      "caption": "完整原片 · 保留原声",
+      "batchNote": "完整视频按归档原文件展示；页面文字保持客户脱敏，不与发布或效果汇总对应。",
       "src": "assets/real-work/work-pet.mp4",
       "poster": "assets/real-work/work-pet.jpg",
-      "duration": 2.917,
+      "duration": 27.349,
       "width": 360,
       "height": 640,
       "sourceId": "W-PET"
@@ -123,13 +123,13 @@
       "id": "work-food",
       "scenarioId": "domestic",
       "title": "食品饮料｜数字人口播",
-      "description": "食品科普口播的归档作品节选，保留AI生成标识。",
+      "description": "食品科普口播的完整归档作品，保留AI生成标识。",
       "deliveryStatus": "案例库归档作品 · 源日期未标明",
-      "caption": "AI口播 · 静音节选",
-      "batchNote": "节选不含直接客户名；不引用源内容中的具体事件作为本方案事实。",
+      "caption": "完整原片 · 保留原声",
+      "batchNote": "完整视频按归档原文件展示；页面文字保持客户脱敏，不引用源内容中的具体事件作为本方案事实。",
       "src": "assets/real-work/work-food.mp4",
       "poster": "assets/real-work/work-food.jpg",
-      "duration": 3.833,
+      "duration": 78.314,
       "width": 360,
       "height": 640,
       "sourceId": "W-FOOD"
@@ -138,15 +138,15 @@
       "id": "work-beauty",
       "scenarioId": "domestic",
       "title": "美妆个护｜AIGC产品场景",
-      "description": "花卉与产品场景的AIGC归档作品节选，品牌文字已处理。",
+      "description": "花卉与产品场景的完整AIGC归档作品。",
       "deliveryStatus": "案例库归档作品 · 源日期未标明",
-      "caption": "AIGC作品 · 产品文字脱敏",
-      "batchNote": "顶部品牌文字裁去，瓶身直接名称处理；产品外观保留。",
+      "caption": "完整原片 · 保留原声",
+      "batchNote": "完整视频按归档原文件展示；页面文字保持客户脱敏，视频保留原有产品与品牌画面。",
       "src": "assets/real-work/work-beauty.mp4",
       "poster": "assets/real-work/work-beauty.jpg",
-      "duration": 8,
+      "duration": 22.012,
       "width": 360,
-      "height": 510,
+      "height": 640,
       "sourceId": "W-BEAUTY"
     },
     {
@@ -155,11 +155,11 @@
       "title": "出行创意｜水墨骑行Demo",
       "description": "古诗、水墨与骑行结合的AIGC创意样片。",
       "deliveryStatus": "创意Demo · 非客户效果案例",
-      "caption": "AIGC创意Demo · 静音节选",
-      "batchNote": "明确为创意演示，不扩大为已履约或投后效果。",
+      "caption": "完整原片 · 保留原声",
+      "batchNote": "完整创意演示原片，不扩大为已履约或投后效果。",
       "src": "assets/real-work/work-mobility.mp4",
       "poster": "assets/real-work/work-mobility.jpg",
-      "duration": 6.708,
+      "duration": 7.8,
       "width": 356,
       "height": 640,
       "sourceId": "W-MOBILITY"
