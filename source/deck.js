@@ -13,7 +13,40 @@ function makeDeckPage(root,id,kind,label,nodes){
   const body=$('.deck-content',frame);nodes.filter(Boolean).forEach(node=>body.append(node));root.append(frame);deckPages.push({id,label,el:frame});
 }
 function domesticBattleReport(){const el=document.createElement('div');el.className='domestic-battle-report';el.innerHTML=`<div class="battle-platforms"><article><div><span>某出行品牌 / 抖音</span><b>2025.09.01—09.14</b></div><strong>205.3<small>万次播放</small></strong><p><b>593</b>个账号 <i>·</i> <b>5,985</b>次发布</p><div class="battle-bar"><i style="width:15.2%"></i></div></article><article><div><span>某出行品牌 / 快手</span><b>2025.09.01—09.14</b></div><strong>1,349.3<small>万次播放</small></strong><p><b>562</b>个账号 <i>·</i> <b>6,393</b>次发布</p><div class="battle-bar"><i style="width:100%"></i></div></article></div><div class="battle-supply"><div><span>同一品牌 / 14天发布期复盘</span><strong>12,378<small>次矩阵发布</small></strong></div><p>双平台矩阵，复盘总播放1,554.6万次。<br><small>发布次数与账号规模，按平台分别展示。</small></p></div><footer>2025.09.01—09.14发布期复盘 · 播放按该期发布内容汇总${source('D19')}</footer>`;return el;}
-function domesticPlatformValue(){const el=document.createElement('div');el.className='platform-value-board';el.innerHTML=`<div class="platform-value-grid"><article class="platform-cost-card"><p class="eyebrow">抖音 / 快手 · 声量效率</p><h3>把品牌声量，<br>做成算得清的曝光。</h3><strong>¥3–15<small> / CPM</small></strong><p>规模越大，参考CPM越低</p><div class="cpm-example"><b>100万次曝光</b><span>→</span><b>约1.5万元</b></div><small>1亿次曝光参考CPM¥3–5，对应约30–50万元。</small></article><article class="platform-xhs-card"><p class="eyebrow">小红书 · 某智能终端品牌</p><h3>有内容可看，<br>也有用户参与。</h3><strong>566<small>条发布</small></strong><div class="xhs-secondary"><b>1,491<small>次互动</small></b><span>图文288条 / 视频278条</span></div><p class="xhs-insight">图文与视频一起铺开，把产品信息放进不同内容形式。</p><footer>项目阶段数据${source('D20')}</footer></article><article class="platform-xhs-card"><p class="eyebrow">小红书 · 某家电品牌</p><h3>发布之后，<br>还要看阅读和互动。</h3><strong>153,722<small>次阅读</small></strong><div class="xhs-secondary"><b>1,498<small>次互动</small></b><span>270条发布 / 237条有效链接</span></div><p class="xhs-insight">围绕用户愿意读、愿意互动的话题，继续做产品内容。</p><footer>2026年7月项目复盘${source('D21')}</footer></article></div><p class="platform-value-conclusion"><b>声量看效率，种草看内容。</b><span>按平台定目标，再用数据决定下一批。</span></p>`;return el;}
+function domesticPlatformValue(){
+  const el=document.createElement('div');el.className='platform-playbook-board';
+  el.innerHTML=`<div class="platform-playbook-grid">
+    <article class="platform-playbook-card platform-playbook-douyin" data-platform="douyin" style="--platform-accent:#174cff">
+      <header><img src="assets/editorial/douyin.webp" alt="抖音"><h3>抖音</h3><span>声量效率</span></header>
+      <h4>用热点开场，<br>把声量放大。</h4>
+      <p class="platform-practice">热点选题接产品卖点，Clipo展开不同版本，用KOC矩阵小批验证后放量。</p>
+      <div class="platform-proof"><p>某出行品牌 · 阶段复盘</p><strong>5,985<small>次发布</small></strong><span><b>593</b>个账号 / 14天发布期</span></div>
+      <footer><span>2025.09.01—09.14</span><a href="#domestic-report">看阶段战报 ↗</a></footer>
+    </article>
+    <article class="platform-playbook-card" data-platform="xiaohongshu" style="--platform-accent:#ff2442">
+      <header><img src="assets/editorial/xiaohongshu.webp" alt="小红书"><h3>小红书</h3><span>种草沉淀</span></header>
+      <h4>从使用场景，<br>讲清购买理由。</h4>
+      <p class="platform-practice">围绕选购和使用问题铺开图文、视频；复盘阅读与互动，再选下一批话题。</p>
+      <div class="platform-proof"><p>某家电品牌 · 阶段复盘</p><strong>153,722<small>次阅读</small></strong><span><b>1,498</b>次互动 / <b>270</b>条发布</span></div>
+      <footer><span>2026年7月项目复盘</span><b>看阅读，也看互动</b></footer>
+    </article>
+    <article class="platform-playbook-card" data-platform="kuaishou" style="--platform-accent:#ff6500">
+      <header><img src="assets/editorial/kuaishou.svg?v=24" alt="快手"><h3>快手</h3><span>矩阵供给</span></header>
+      <h4>内容和账号，<br>找到好组合。</h4>
+      <p class="platform-practice">单独看快手的账号与内容表现，调整选题和供给；按本平台的数据选片、放量。</p>
+      <div class="platform-proof"><p>某出行品牌 · 阶段复盘</p><strong>6,393<small>次发布</small></strong><span><b>562</b>个账号 / 14天发布期</span></div>
+      <footer><span>2025.09.01—09.14</span><a href="#domestic-report">看分平台表现 ↗</a></footer>
+    </article>
+    <article class="platform-playbook-card" data-platform="wechat-channels" style="--platform-accent:#eea31b">
+      <header><img src="assets/editorial/wechat-channels.svg?v=24" alt="视频号"><h3>视频号</h3><span>内容适配</span></header>
+      <h4>好结构接着用，<br>开场节奏重新调。</h4>
+      <p class="platform-practice">已有产品素材继续用，拆开脚本、重组镜头、调整节奏，做适合视频号的新版本。</p>
+      <button class="platform-work-proof" data-wall="work-gallery-conversion-06" aria-label="播放视频号口腔护理完整作品"><span class="platform-work-poster"><img src="assets/real-work/work-gallery-conversion-06.jpg" alt="口腔护理视频号改版作品"><i aria-hidden="true">▶</i></span><span><b>脚本复刻<br>素材重组<br>节奏调整</b><small>播放完整作品 ↗</small></span></button>
+      <footer><span>某口腔护理品牌</span><b>跨平台内容二创</b></footer>
+    </article>
+  </div><p class="platform-playbook-conclusion"><b>复用产品依据，按平台改表达。</b><span>先对齐任务，再用实际反馈决定下一批。</span></p>`;
+  return el;
+}
 function globalCpmGuide(){const el=document.createElement('div');el.className='cpm-guide';el.innerHTML=`<div class="cpm-guide-main"><div class="cpm-world"><div class="cpm-world-caption"><b>26国分档CPM参考</b><span>USD / 千次曝光</span><button id="cpm-tour-toggle" aria-pressed="true">暂停导览</button></div>${data.cpm.mapSvg}<p>颜色越深，基础档CPM越高。点击国家查看阶梯价。</p></div><aside class="cpm-country-detail" id="cpm-country-detail" aria-live="polite"></aside></div><div class="cpm-country-buttons" role="group" aria-label="选择CPM国家">${data.cpm.countries.map(c=>`<button data-cpm-country="${c.iso2}" title="${c.name}" aria-label="${c.name}" aria-pressed="${c.iso2==='VN'}">${c.iso2}</button>`).join('')}</div><p class="cpm-guide-note">2026.11.09报价参考 · USD/千次曝光 · 各国独立、分档计价${source('O-CPM')}</p>`;return el;}
 function setCpmCountry(iso){cpmSelected=iso;const c=data.cpm.countries.find(x=>x.iso2===iso);if(!c)return;$('#cpm-country-detail').innerHTML=`<p class="eyebrow">${c.region}</p><h3>${c.name}</h3><strong>US$${c.base.toFixed(2)}<small>基础档CPM</small></strong><div class="cpm-tier-rows">${[['0–1,000万',c.base],['1,000–2,000万',c.t1],['2,000–3,000万',c.t2],['3,000万以上',c.t3]].map(([tier,rate])=>`<div><span>${tier}</span><b>US$${rate.toFixed(2)}</b></div>`).join('')}</div><p>每档仅对落入本档的曝光计价。</p>`;$$('[data-cpm-country]').forEach(el=>{const on=el.dataset.cpmCountry===iso;el.classList.toggle('selected',on);if(el.tagName==='BUTTON')el.setAttribute('aria-pressed',String(on));});}
 function syncCpmTour(){clearTimeout(cpmTourTimer);cpmTourTimer=null;const button=$('#cpm-tour-toggle');if(button){button.textContent=cpmTourEnabled&&motion?'暂停导览':'自动导览';button.setAttribute('aria-pressed',String(cpmTourEnabled&&motion));}const on=deckPages[deckActive]?.id==='overseas-cpm-guide'&&cpmTourEnabled&&motion&&!reading&&!reduce.matches&&!document.hidden&&!$('dialog[open]')&&$('#contents').hidden&&!cpmTourHover;if(!on)return;const delay=Math.max(4500,cpmTourHoldUntil-Date.now());cpmTourTimer=setTimeout(()=>{const list=data.cpm.countries,index=list.findIndex(c=>c.iso2===cpmSelected);setCpmCountry(list[(index+1)%list.length].iso2);syncCpmTour();},delay);}
@@ -40,7 +73,7 @@ function paginateDeck(){
     const root=$('#'+id),h=$('.section-heading',root),meta=$('.scenario-meta',root),cases=$('.portfolio-grid',root),road=$('.delivery',root),commercial=$('.commercial',root),label=data.scenarios.find(s=>s.id===id).label;
     let pages=[];
     if(id==='domestic')pages=[
-      ['domestic-platform-value','platform-value',label+' / 平台价值',[deckHeading('PLATFORM VALUE / 国内矩阵','抖快算声量成本，小红书看内容沉淀。','抖音、快手做声量，小红书做种草，各有明确的内容任务。'),domesticPlatformValue()]],
+      ['domestic-platform-value','platform-value',label+' / 平台经验',[deckHeading('PLATFORM PLAYBOOK / 国内矩阵经验','同一个产品，按平台换打法。','我们的做法：产品事实保持一致，选题、开场和节奏分别调整。'),domesticPlatformValue()]],
       ['domestic-report','battle',label+' / 代表项目阶段战报',[deckHeading('DOMESTIC / VERIFIED PROJECT SNAPSHOTS','14天，完成1.24万次矩阵发布。','短期内把内容铺开，让品牌持续出现在用户的信息流。'),domesticBattleReport()]],
       ['domestic-cases-page','cases',label+' / 案例集',[h,meta,cases]],
       ['domestic-insight','natural-flow',label+' / 自然流推荐机制',[deckHeading('NATURAL REACH / 推荐如何发生','先让平台看懂，再让对的人看见。','自然流推荐，会根据内容相关性与用户反馈持续调整。'),naturalFlowMechanism()]],
@@ -93,7 +126,7 @@ const catalogSpecs=[
  ['matrix-work-wall','品牌如何获得增长','cases','六个作品窗口，看内容如何跨行业展开。','完整版视频墙'],
  ['domestic-chapter','01 国内UGC矩阵','all','国内UGC矩阵','章节引导 · CPM声量方案'],
  ['domestic-work-wall','01 国内UGC矩阵','cases','行业不同，好内容各有一套。','多客户 / 多内容形式 / 六支完整视频'],
- ['domestic-platform-value','01 国内UGC矩阵','cases','抖快算声量成本，小红书看内容沉淀。','CPM与小红书原始报告'],
+ ['domestic-platform-value','01 国内UGC矩阵','cases','同一个产品，按平台换打法。','抖音 / 小红书 / 快手 / 视频号'],
  ['domestic-report','01 国内UGC矩阵','cases','14天，完成1.24万次矩阵发布。','双平台阶段战报'],
  ['domestic-cases-page','01 国内UGC矩阵','cases','一批素材，持续供给多个账号。','案例集与真实作品'],
  ['domestic-insight','01 国内UGC矩阵','methods','先让平台看懂，再让对的人看见。','内容信号 / 兴趣匹配 / 用户反馈'],

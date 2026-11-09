@@ -71,6 +71,6 @@ const chapterObserver=new IntersectionObserver(entries=>{entries.forEach(e=>{if(
 let ticking=false;function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(()=>{const max=document.documentElement.scrollHeight-innerHeight;$('#progress').style.transform=`scaleX(${max?scrollY/max:0})`;document.body.classList.toggle('scrolled',scrollY>20);ticking=false;});}addEventListener('scroll',onScroll,{passive:true});onScroll();
 const videoObserver=new IntersectionObserver(entries=>{for(const e of entries)if(!e.isIntersecting)e.target.pause();},{threshold:.05});$$('video').forEach(v=>videoObserver.observe(v));document.addEventListener('visibilitychange',()=>{if(document.hidden)$$('video').forEach(v=>v.pause());});
 const aliases={review:'model',delivery:'model',architecture:'offering',evidence:'domestic'};if(aliases[location.hash.slice(1)])location.hash=aliases[location.hash.slice(1)];if(location.hash)syncHashToDeck();
-window.__SC_VERSION__='v0.4.26-domestic-chapter';
+window.__SC_VERSION__='v0.4.27-platform-playbook';
 /* INLINE_LOCALE */
 })();
