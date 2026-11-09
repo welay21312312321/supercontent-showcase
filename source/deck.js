@@ -20,29 +20,25 @@ function domesticPlatformValue(){
       <header><img src="assets/editorial/douyin.webp" alt="抖音"><h3>抖音</h3><span>声量效率</span></header>
       <h4>用热点开场，<br>把声量放大。</h4>
       <p class="platform-practice">热点选题接产品卖点，Clipo展开不同版本，用KOC矩阵小批验证后放量。</p>
-      <div class="platform-proof"><p>某出行品牌 · 阶段复盘</p><strong>5,985<small>次发布</small></strong><span><b>593</b>个账号 / 14天发布期</span></div>
-      <footer><span>2025.09.01—09.14</span><a href="#domestic-report">看阶段战报 ↗</a></footer>
+      <div class="platform-benefit"><span>品牌获得</span><strong>声量有规模，<br>预算可规划。</strong></div>
     </article>
     <article class="platform-playbook-card" data-platform="xiaohongshu" style="--platform-accent:#ff2442">
       <header><img src="assets/editorial/xiaohongshu.webp" alt="小红书"><h3>小红书</h3><span>种草沉淀</span></header>
       <h4>从使用场景，<br>讲清购买理由。</h4>
       <p class="platform-practice">围绕选购和使用问题铺开图文、视频；复盘阅读与互动，再选下一批话题。</p>
-      <div class="platform-proof"><p>某家电品牌 · 阶段复盘</p><strong>153,722<small>次阅读</small></strong><span><b>1,498</b>次互动 / <b>270</b>条发布</span></div>
-      <footer><span>2026年7月项目复盘</span><b>看阅读，也看互动</b></footer>
+      <div class="platform-benefit"><span>品牌获得</span><strong>用户选购时，<br>有内容可参考。</strong></div>
     </article>
     <article class="platform-playbook-card" data-platform="kuaishou" style="--platform-accent:#ff6500">
       <header><img src="assets/editorial/kuaishou.svg?v=24" alt="快手"><h3>快手</h3><span>矩阵供给</span></header>
       <h4>内容和账号，<br>找到好组合。</h4>
       <p class="platform-practice">单独看快手的账号与内容表现，调整选题和供给；按本平台的数据选片、放量。</p>
-      <div class="platform-proof"><p>某出行品牌 · 阶段复盘</p><strong>6,393<small>次发布</small></strong><span><b>562</b>个账号 / 14天发布期</span></div>
-      <footer><span>2025.09.01—09.14</span><a href="#domestic-report">看分平台表现 ↗</a></footer>
+      <div class="platform-benefit"><span>品牌获得</span><strong>传播不断档，<br>内容接得上。</strong></div>
     </article>
     <article class="platform-playbook-card" data-platform="wechat-channels" style="--platform-accent:#eea31b">
       <header><img src="assets/editorial/wechat-channels.svg?v=24" alt="视频号"><h3>视频号</h3><span>内容适配</span></header>
       <h4>好结构接着用，<br>开场节奏重新调。</h4>
       <p class="platform-practice">已有产品素材继续用，拆开脚本、重组镜头、调整节奏，做适合视频号的新版本。</p>
-      <button class="platform-work-proof" data-wall="work-gallery-conversion-06" aria-label="播放视频号口腔护理完整作品"><span class="platform-work-poster"><img src="assets/real-work/work-gallery-conversion-06.jpg" alt="口腔护理视频号改版作品"><i aria-hidden="true">▶</i></span><span><b>脚本复刻<br>素材重组<br>节奏调整</b><small>播放完整作品 ↗</small></span></button>
-      <footer><span>某口腔护理品牌</span><b>跨平台内容二创</b></footer>
+      <div class="platform-benefit"><span>品牌获得</span><strong>一批好素材，<br>多一个传播入口。</strong></div>
     </article>
   </div><p class="platform-playbook-conclusion"><b>复用产品依据，按平台改表达。</b><span>先对齐任务，再用实际反馈决定下一批。</span></p>`;
   return el;
