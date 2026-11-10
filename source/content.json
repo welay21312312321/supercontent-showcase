@@ -4,7 +4,7 @@
     "kicker": "TEZIGN / SUPERCONTENT",
     "positioning": "特赞的 AI Native 内容团队",
     "tagline": "品牌内容，从策划到成批交付。",
-    "version": "v0.4.29",
+    "version": "v0.4.30",
     "date": "2026-10-29",
     "scopeNote": "依据客户原档、生产需求、经营记录、周报与近月会议整理；匿名数字保留统计范围，方法标准按本次合作约定。",
     "brand": "SuperContent Clipo内容服务团队",
@@ -13,7 +13,7 @@
   },
   "opening": {
     "eyebrow": "TEZIGN / AI NATIVE CONTENT TEAM",
-    "title": "让产品，\n持续出现在用户眼前。",
+    "title": "把产品，\n融进用户每天刷的内容。",
     "intro": "AI内容生产 × KOC矩阵，把产品卖点做成用户愿意看的内容。",
     "cta": "看三个场景怎么做",
     "definition": "UGC表达由内容工厂制作，KOC矩阵账号承载发布与验证；真实体验、演示与AI创意各有依据。"
@@ -2129,5 +2129,423 @@
         }
       ]
     }
-  }
+  },
+  "caseStudies": [
+    {
+      "id": "domestic-trend",
+      "scenarioId": "domestic",
+      "workId": "study-domestic-trend",
+      "sector": "某厨电品牌",
+      "method": "热点追加",
+      "title": "热点接成连续剧，\n产品就有了下一次出场。",
+      "scope": "单条作品",
+      "period": "2026.05 项目复盘",
+      "metrics": [
+        {
+          "value": "280,470",
+          "label": "播放"
+        },
+        {
+          "value": "5,066",
+          "label": "点赞"
+        },
+        {
+          "value": "799",
+          "label": "收藏"
+        }
+      ],
+      "hook": "雪山救狐的熟悉情节，接上厨电反转。",
+      "route": [
+        "借熟悉的剧情",
+        "把反转留给产品",
+        "向不同SKU延展"
+      ],
+      "insight": "同一故事能继续写，峰值却不能直接复制。三款厨电延展都有播放，下一轮要找准产品最自然的入场点。",
+      "test": "只改产品入场时点：反转前 vs 反转后。",
+      "readout": "看前段留存、完播和产品识别评论。",
+      "cues": [
+        0,
+        6.5,
+        13
+      ],
+      "context": "",
+      "chart": {
+        "label": "三个SKU延展的播放快照",
+        "items": [
+          {
+            "label": "电饭煲",
+            "value": 280470
+          },
+          {
+            "label": "豆浆机",
+            "value": 33908
+          },
+          {
+            "label": "空气炸锅",
+            "value": 10078
+          }
+        ]
+      }
+    },
+    {
+      "id": "domestic-selection",
+      "scenarioId": "domestic",
+      "workId": "study-domestic-selection",
+      "sector": "某全屋智能家电品牌",
+      "method": "选购解释",
+      "title": "用户想问的细节，\n就是产品最好的内容入口。",
+      "scope": "单条视频 · 原表字段为阅读",
+      "period": "2026.07 项目复盘",
+      "metrics": [
+        {
+          "value": "1,067",
+          "label": "阅读"
+        },
+        {
+          "value": "26",
+          "label": "互动"
+        },
+        {
+          "value": "26.9s",
+          "label": "完整作品"
+        }
+      ],
+      "hook": "原来安装空调，还有这些细节。",
+      "route": [
+        "从装修现场切入",
+        "展示安装与测试",
+        "给出可理解的细节"
+      ],
+      "insight": "把“系统能力”讲成“我家怎么装”。现场、操作、测试画面，能沉淀成用户选购时反复查看的解释内容。",
+      "test": "同一问题，测试“对比清单”与“现场过程”两种讲法。",
+      "readout": "看收藏、具体提问和有效阅读，不把播放当成交。",
+      "cues": [
+        0,
+        7.5,
+        17
+      ],
+      "context": "",
+      "chart": null
+    },
+    {
+      "id": "domestic-event",
+      "scenarioId": "domestic",
+      "workId": "study-domestic-event",
+      "sector": "某金融服务品牌",
+      "method": "活动热点赛马",
+      "title": "一次演唱会，\n拆出不止一种被刷到的理由。",
+      "scope": "项目累计 · 左侧为同项目样片",
+      "period": "2025.08 活动项目终期复盘",
+      "metrics": [
+        {
+          "value": "10,828",
+          "label": "次内容发布"
+        },
+        {
+          "value": "7,979,024",
+          "label": "播放"
+        },
+        {
+          "value": "¥12.53",
+          "label": "项目CPM"
+        }
+      ],
+      "hook": "从观众熟悉的人物联想，切进演唱会现场。",
+      "route": [
+        "明星兴趣入口",
+        "现场片段与活动",
+        "反馈后追加好结构"
+      ],
+      "insight": "品牌活动可以有多个兴趣入口。项目中期已追加明星IP结构；内容团队留下的是可复投的开场，而不只是一批视频。",
+      "test": "明星联想、热梗、上升热点各3条，统一回传时间。",
+      "readout": "看分组中位播放、互动与活动识别。",
+      "cues": [
+        0,
+        3,
+        11
+      ],
+      "context": "终期项目共22,636次互动；项目数据不归到左侧单片。",
+      "chart": null
+    },
+    {
+      "id": "overseas-score",
+      "scenarioId": "overseas",
+      "workId": "study-overseas-score",
+      "sector": "某家电品牌",
+      "method": "赛事热点",
+      "title": "先进入球迷的讨论，\n再让品牌进入视野。",
+      "scope": "单帖快照 · 自然/付费未分列",
+      "period": "截至 2026.07.29",
+      "metrics": [
+        {
+          "value": "2,186,929",
+          "label": "曝光"
+        },
+        {
+          "value": "18,009",
+          "label": "互动"
+        },
+        {
+          "value": "32.6s",
+          "label": "完整作品"
+        }
+      ],
+      "hook": "先给赛事结果，再接品牌与赛事的关联。",
+      "route": [
+        "赛事结果开场",
+        "赞助与赛场关联",
+        "产品视觉收尾"
+      ],
+      "insight": "热点负责打开共同话题，品牌要在同一条内容里接住。这里验证了这条发布的传播表现，尚未证明某种语言更有效。",
+      "test": "同语言、同赛事，只改“结果直给”与“关键瞬间提问”。",
+      "readout": "自然与付费分开看；再看完播、评论与品牌识别。",
+      "cues": [
+        0,
+        9,
+        23
+      ],
+      "context": "",
+      "chart": null
+    },
+    {
+      "id": "overseas-feature",
+      "scenarioId": "overseas",
+      "workId": "study-overseas-feature",
+      "sector": "某家电品牌",
+      "method": "生活顾虑 × 功能演示",
+      "title": "别先报参数，\n先回答“我会怎么用”。",
+      "scope": "单帖快照 · 自然/付费未分列",
+      "period": "截至 2026.07.29",
+      "metrics": [
+        {
+          "value": "3,281,731",
+          "label": "曝光"
+        },
+        {
+          "value": "6,862",
+          "label": "互动"
+        },
+        {
+          "value": "48.0s",
+          "label": "完整作品"
+        }
+      ],
+      "hook": "Would you wash these together?",
+      "route": [
+        "具体衣物提出疑问",
+        "分区与洗烘演示",
+        "回到日常使用"
+      ],
+      "insight": "用“这些衣服要一起洗吗？”建立具体任务。后面的功能画面逐一回答，让卖点有了使用对象；下一轮再与参数开场对比。",
+      "test": "只换问题入口：混洗顾虑 vs 洗护步骤，正文保持一致。",
+      "readout": "看完播、产品理解评论、收藏与分流量曝光。",
+      "cues": [
+        0,
+        8,
+        24
+      ],
+      "context": "",
+      "chart": null
+    },
+    {
+      "id": "overseas-range",
+      "scenarioId": "overseas",
+      "workId": "study-overseas-range",
+      "sector": "某家电品牌",
+      "method": "多品类场景串联",
+      "title": "一段回家后的生活，\n串起一整套产品。",
+      "scope": "同结构150条分组 · 左侧为该组样片",
+      "period": "截至 2026.08.17 · 自然与赛马投流合计",
+      "metrics": [
+        {
+          "value": "150",
+          "label": "条分组内容"
+        },
+        {
+          "value": "5,502,215",
+          "label": "分组曝光"
+        },
+        {
+          "value": "9,452",
+          "label": "分组互动"
+        }
+      ],
+      "hook": "从“好热”开始，顺着回家、喝水、看球展开。",
+      "route": [
+        "一个生活任务",
+        "多个产品依次回应",
+        "品牌整体收束"
+      ],
+      "insight": "多品类内容需要一条生活线，而不是把产品轮流摆出来。150条分组已有传播记录，值得继续拆分场景和开场复测。",
+      "test": "固定产品组合，只比较“生活任务串联”与“逐品类展示”。",
+      "readout": "看前段留存、品类识别、自然中位播放。",
+      "cues": [
+        0,
+        9,
+        28
+      ],
+      "context": "",
+      "chart": null
+    },
+    {
+      "id": "overseas-beat",
+      "scenarioId": "overseas",
+      "workId": "study-overseas-beat",
+      "sector": "某手机品牌",
+      "method": "音乐卡点 × 功能变化",
+      "title": "功能有多直观？\n让用户先看见变化。",
+      "scope": "结构观察 · 未取得单片效果数据",
+      "period": "完整归档作品",
+      "metrics": [
+        {
+          "value": "11.1s",
+          "label": "完整作品"
+        },
+        {
+          "value": "Before → After",
+          "label": "对照结构"
+        },
+        {
+          "value": "功能展示",
+          "label": "内容任务"
+        }
+      ],
+      "hook": "先给原画面与选择，再展示效果变化。",
+      "route": [
+        "原画面建立参照",
+        "留出选择与期待",
+        "连续展示结果"
+      ],
+      "insight": "把功能做成看得懂的前后差异。可复制的是“参照—期待—结果”结构，不能直接承诺这条形式会带来高播放。",
+      "test": "只改结果出现的时点：立即展示 vs 短暂停顿后揭晓。",
+      "readout": "固定素材与音乐，再看留存、重播与功能理解。",
+      "cues": [
+        0,
+        2,
+        5.5
+      ],
+      "context": "",
+      "chart": null
+    },
+    {
+      "id": "conversion-offer",
+      "scenarioId": "conversion",
+      "workId": "study-conversion-offer",
+      "sector": "某鲜果食品品牌",
+      "method": "促销机制 × 礼盒价值",
+      "title": "把一盒的价值，\n讲成用户下单的理由。",
+      "scope": "展示单片 · 支付数据",
+      "period": "2026.07.01—07.28 测试窗口",
+      "metrics": [
+        {
+          "value": "79",
+          "label": "支付订单"
+        },
+        {
+          "value": "¥3,552",
+          "label": "支付GMV"
+        },
+        {
+          "value": "2.55",
+          "label": "支付ROI"
+        }
+      ],
+      "hook": "果园开场接礼盒，再把口感和购买机制讲清楚。",
+      "route": [
+        "果园与礼盒开场",
+        "试吃与包装价值",
+        "价格与囤货理由"
+      ],
+      "insight": "这条素材跑出79笔支付订单，消耗也有了更实在的样本。值得复测的是“开场—礼盒价值—购买机制”的完整衔接，再看能否持续跑量。",
+      "test": "只换前3秒：果园人设 vs 礼盒实拍；后半段权益与价格不变。",
+      "readout": "同SKU、同机制，对比消耗、支付订单与支付ROI。",
+      "cues": [
+        0,
+        5.5,
+        12
+      ],
+      "context": "实际消耗 ¥1,393.81 · 点击844次 · 点击率5.03%。",
+      "chart": null
+    },
+    {
+      "id": "conversion-hook",
+      "scenarioId": "conversion",
+      "workId": "study-conversion-hook",
+      "sector": "某鲜果食品品牌",
+      "method": "AI钩子 × 购买理由",
+      "title": "AI负责勾起好奇，\n产品负责给出购买理由。",
+      "scope": "展示单片 · 支付数据",
+      "period": "2026.07.01—07.28 测试窗口",
+      "metrics": [
+        {
+          "value": "24",
+          "label": "支付订单"
+        },
+        {
+          "value": "¥244.26",
+          "label": "实际消耗"
+        },
+        {
+          "value": "4.34",
+          "label": "支付ROI"
+        }
+      ],
+      "hook": "视觉开场之后，接产品、果肉和产地场景。",
+      "route": [
+        "AI开场引起好奇",
+        "产品细节接住兴趣",
+        "食用与礼盒承接"
+      ],
+      "insight": "这条素材已有24笔支付订单，值得继续验证；同方向90条整体支付ROI为2.02，不能把单片4.34当成全方向表现。",
+      "test": "正文不动，只比较真实产品开场与AI视觉开场。",
+      "readout": "同步看新增消耗、点击和支付；参数使用真实产品依据。",
+      "cues": [
+        0,
+        4,
+        15
+      ],
+      "context": "支付GMV ¥1,060.60；生成的仪表画面不构成真实检测证明。",
+      "chart": null
+    },
+    {
+      "id": "conversion-household",
+      "scenarioId": "conversion",
+      "workId": "study-conversion-household",
+      "sector": "某家居消费品品牌",
+      "method": "618机制 × 产品价值",
+      "title": "先算清这笔购买账，\n再把产品价值拍给人看。",
+      "scope": "展示单片 · 支付数据",
+      "period": "2025.04.30—06.10 项目统计窗口",
+      "metrics": [
+        {
+          "value": "44",
+          "label": "成交订单"
+        },
+        {
+          "value": "¥19,729",
+          "label": "整体成交金额"
+        },
+        {
+          "value": "5.53",
+          "label": "支付ROI"
+        }
+      ],
+      "hook": "“打工人618好物必囤”：先给人群与权益，再展示产品。",
+      "route": [
+        "人群与618权益",
+        "滤芯细节与演示",
+        "购买机制收尾"
+      ],
+      "insight": "这条内容把使用人群、活动权益和产品演示接在一起。可复用的是完整的购买理由：谁会需要、为什么值、产品能做什么。",
+      "test": "同样权益下，只比较“促销直给”与“办公室使用场景”两种开场。",
+      "readout": "固定SKU、权益与后半段，比较消耗、订单和支付ROI。",
+      "cues": [
+        0,
+        7,
+        14
+      ],
+      "context": "本片消耗¥3,570.15。同项目交付500条，回传合计：1,007笔订单 / 成交¥412,622.08 / 综合支付ROI 4.14。",
+      "chart": null
+    }
+  ]
 }

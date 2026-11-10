@@ -551,3 +551,77 @@ body.slide-deck{--deck-toolbar-space:98px}.slide-deck .header-tools{display:none
 .slide-deck.locale-en .platform-benefit>strong{font-size:21px;letter-spacing:-.3px}
 .slide-deck.locale-en .platform-playbook-conclusion{font-size:15px}
 .slide-deck.locale-en .platform-playbook-conclusion>span{font-size:13px}
+
+/* Case studies: full works, scoped results, an interpretation, and one next test. */
+.slide-deck .deck-kind-case-study,.slide-deck .dark .deck-kind-case-study{background:#fff!important;color:#10131d!important;--paper:#fff;--ink:#10131d;--muted:#596377;--line:#d9deeb;--pale:#edf3ff}
+.slide-deck .deck-kind-case-study .deck-content{inset:91px 80px 68px}
+.study-panel{height:100%;display:grid;grid-template-rows:132px 1fr;gap:15px}
+.study-heading p{display:flex;align-items:center;gap:22px;font-size:13px!important;line-height:1.4!important;margin:0 0 12px;color:#596377}
+.study-heading p>span:first-child{font-size:12px;letter-spacing:1.6px;color:#174cff;font-weight:750}
+.study-heading p>b{font-size:12px;font-weight:650;padding:5px 10px;background:#eef2ff;color:#174cff;border-radius:3px}
+.study-heading h2{font-size:43px;line-height:1.12;letter-spacing:-1.3px;margin:0;font-weight:780;max-width:1360px}
+.study-layout{display:grid;grid-template-columns:350px minmax(0,1fr);gap:60px;min-height:0}
+.study-work{margin:0;min-width:0;padding:10px 12px 8px;background:#f3f5fc;border:1px solid #e0e6f4;border-radius:10px;display:flex;flex-direction:column;align-items:stretch;min-height:0}
+.study-film{height:454px;aspect-ratio:9/16;max-width:100%;position:relative;margin:0 auto;flex-shrink:0;background:#0c1018;border-radius:6px;overflow:hidden}
+.study-film video{display:block;width:100%;height:100%;object-fit:contain;background:#0c1018}
+.study-work figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:12px 0 8px;font-size:14px;line-height:1.4}
+.study-work figcaption>b{font-size:13px;white-space:nowrap}
+.study-work figcaption button{color:#174cff;padding:2px;font-size:12px;border:0;background:none;white-space:nowrap;cursor:pointer}
+.study-cues{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #d9e1f7;border-radius:4px;overflow:hidden;flex-shrink:0}
+.study-cues button{padding:8px 4px;display:flex;gap:5px;justify-content:center;align-items:center;border:0;border-right:1px solid #d9e1f7;background:white;color:#596377;font-size:12px;cursor:pointer}
+.study-cues button:last-child{border-right:0}
+.study-cues small{font-size:10px;color:#8695b3}
+.study-cues button[aria-current="step"]{color:#174cff;background:#e7edff;font-weight:700}
+.study-media-note{font-size:10px;color:#73809a;line-height:1.4;margin-top:7px;text-align:center}
+.study-analysis{min-width:0;display:flex;flex-direction:column;gap:13px}
+.study-scope{display:flex;justify-content:space-between;gap:16px;color:#596377;font-size:12px;line-height:1.4}
+.study-scope b{color:#174cff;font-weight:650}
+.study-scope>span{max-width:48%;text-align:right}
+.study-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:9px 0 19px;border-bottom:1px solid #d9deeb}
+.study-metrics>div{min-width:0}
+.study-metrics strong{display:block;font-size:43px;line-height:1.1;font-weight:780;letter-spacing:-1.4px;white-space:nowrap;color:#10131d;font-variant-numeric:tabular-nums}
+.study-metrics>div:first-child strong{color:#174cff}
+.study-metrics span{display:block;font-size:13px;color:#596377;margin-top:7px}
+.study-hook>span,.study-take>span,.study-test>span,.study-chart>span{font-size:12px;color:#73809a;font-weight:650}
+.study-hook h3{font-size:22px;line-height:1.45;letter-spacing:-.3px;margin:5px 0 0;max-width:none;color:#10131d}
+.study-route{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0;padding:0}
+.study-route li{min-height:52px;padding:9px 12px;display:flex;gap:10px;align-items:center;background:#eef2ff;position:relative;color:#263a72}
+.study-route small{font-size:10px;font-weight:700;color:#174cff}
+.study-route b{font-size:14px;line-height:1.45;font-weight:650}
+.study-route li:not(:last-child):after{content:'→';position:absolute;right:-8px;font-size:13px;color:#174cff;z-index:1}
+.study-take p{font-size:18px!important;line-height:1.6!important;color:#303b51;margin:4px 0 0}
+.study-context{font-size:12px!important;line-height:1.55!important;color:#69758b;margin:0;padding-left:12px;border-left:2px solid #bac9ff}
+.study-test{margin-top:auto;background:#174cff;padding:13px 18px;color:white;border-radius:4px}
+.study-test>span{color:#cad6ff;font-size:11px;letter-spacing:.4px}
+.study-test p{font-size:17px!important;line-height:1.45!important;font-weight:650;color:white;margin:6px 0}
+.study-test small{font-size:12px;line-height:1.45;color:#e1e8ff;display:block}
+.study-chart{display:grid;gap:7px;padding:8px 12px;background:#f6f8fd;border:1px solid #e5e9f4}
+.study-chart>div{display:grid;grid-template-columns:68px minmax(0,1fr) 80px;align-items:center;gap:12px}
+.study-chart b{font-size:12px;color:#596377;font-weight:500}
+.study-chart i{height:6px;display:block;background:linear-gradient(to right,#174cff var(--bar),#e2e8f7 var(--bar))}
+.study-chart strong{text-align:right;font-size:12px;font-variant-numeric:tabular-nums}
+.study-wide{grid-template-columns:590px minmax(0,1fr);gap:46px}
+.study-wide .study-work{padding:25px 16px 16px;justify-content:center}
+.study-wide .study-film{width:100%;height:auto;aspect-ratio:16/9}
+.study-wide .study-work figcaption{padding-top:22px}
+.study-wide .study-metrics{gap:12px}
+.study-wide .study-metrics strong{font-size:36px}
+.study-wide .study-hook h3{font-size:21px}
+.study-wide .study-take p{font-size:17px!important}
+.study-wide .study-route li{padding:8px;gap:6px}
+.study-wide .study-route b{font-size:13px}
+.study-error{position:absolute;inset:30% 10% auto;background:#fff;color:#10131d;padding:16px;border-radius:5px;font-size:13px!important}
+.study-error[hidden]{display:none!important}
+.study-error button{display:block;margin-top:8px;background:#174cff;color:#fff;padding:8px 10px;border:0;border-radius:3px;cursor:pointer}
+.locale-en .study-heading h2{font-size:40px;letter-spacing:-.8px}
+.locale-en .study-scope{font-size:11px}
+.locale-en .study-take p{font-size:16px!important;line-height:1.5!important}
+.locale-en .study-route b{font-size:12px}
+.locale-en .study-test p{font-size:15px!important}
+.locale-en .study-hook h3{font-size:20px}
+.locale-en .study-work figcaption>b{font-size:11px;white-space:normal}
+
+/* Spell out formula terms while retaining a prominent initial. */
+.slide-deck .deck-content .formula-equation strong.formula-word{display:flex;align-items:baseline;gap:0;white-space:nowrap;letter-spacing:-.6px;line-height:1.1}
+.slide-deck .deck-content .formula-word .formula-initial{font-size:54px;font-weight:780}
+.slide-deck .deck-content .formula-word .formula-rest{font-size:23px;font-weight:550;letter-spacing:-.5px}

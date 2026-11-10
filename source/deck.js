@@ -60,6 +60,21 @@ function matrixScriptCases(){const el=document.createElement('div');el.className
  ['海外 · 智能终端','声量赛马','9.3–140万','TOP单条播放','7批次赛马 · 所选TOP作品含加热','耐用性 → AI功能 → 艺术玩法 → 逐国筛选','用同一产品，找到不同国家愿意看的理由。'],
  ['海外 · 3D工具','观看与互动验证','99','个创意模板','同模板5条IG观看271–45,094次','工具演示 → 使用结果 → 模板迭代 → 内容复用','保留产品结果，把场景和玩法继续展开。']];el.innerHTML=`<div class="script-case-grid">${cases.map(([label,stage,n,unit,detail,chain,insight],i)=>`<article class="script-case script-case-${i+1}"><header><span>${label}</span><small>${stage}</small></header><strong>${n}<span>${unit}</span></strong><p class="script-case-detail">${detail}</p><p class="script-case-chain">${chain}</p><p class="script-case-insight">${insight}</p></article>`).join('')}</div><p class="script-case-note">国内三案已进入成交测试；海外两案沉淀内容方向与模板，继续衔接转化验证。</p>`;return el;}
 function naturalFlowMechanism(){const el=document.createElement('div');el.className='natural-flow-mechanism';el.innerHTML=`<div class="algo-flow"><article class="algo-node algo-content"><small>01 / 内容信号</small><div class="algo-video-art"><i>▶</i><span>场景</span><span>卖点</span><span>表达</span></div><h3>这条内容，在说什么？</h3><p>画面、字幕、声音与话题，帮助形成可理解的内容信息。</p></article><span class="algo-arrow">→</span><article class="algo-node algo-match"><small>02 / 兴趣匹配</small><div class="algo-audience"><i></i><i></i><i></i><i></i><i></i><i></i><b>兴趣</b></div><h3>谁可能愿意看？</h3><p>结合用户历史行为，预测相关性，再排序和推荐。</p></article><span class="algo-arrow">→</span><article class="algo-node algo-feedback"><small>03 / 用户反馈</small><div class="algo-signal-art"><span>◷<small>观看</small></span><span>♡<small>互动</small></span><span>↗<small>分享</small></span></div><h3>用户，给出下一轮信号。</h3><p>观看时长、互动、分享与不感兴趣等反馈，持续影响推荐。</p></article></div><div class="algo-loop"><span>↶</span><b>持续更新推荐</b><p>反馈进入模型，下一次匹配随之调整。</p></div><div class="algo-practice"><div><small>内容怎么配合</small><h3>让平台能理解，<br>让用户愿意看。</h3></div><ul><li><b>说给谁听</b><span>选具体人群和使用情境</span></li><li><b>讲清一件事</b><span>开场、画面和卖点保持一致</span></li><li><b>用反馈改内容</b><span>换场景、换开场，保留有反应的结构</span></li></ul></div>`;return el;}
+function caseStudyPanel(c){
+  const w=media.works.find(x=>x.id===c.workId),el=document.createElement('div');
+  el.className='study-panel';el.dataset.caseStudy=c.id;
+  const siblings=data.caseStudies.filter(x=>x.scenarioId===c.scenarioId),index=siblings.indexOf(c);
+  el.innerHTML=`<header class="study-heading"><p><span>CASE STUDY ${pad(index+1)} / ${pad(siblings.length)}</span><span>${esc(c.sector)}</span><b>${esc(c.method)}</b></p><h2>${lines(c.title)}</h2></header><div class="study-layout ${w.width>w.height?'study-wide':''}"><figure class="study-work"><div class="study-film"><video controls playsinline preload="none" src="${esc(w.src)}" poster="${esc(w.poster)}" aria-label="${esc(w.title)}"></video><p class="study-error" hidden><span>视频加载未完成，可重新加载。</span><button type="button">重新加载视频</button></p></div><figcaption><b>${esc(c.method)}</b><button data-wall="${w.id}">放大播放 <span aria-hidden="true">↗</span></button></figcaption><div class="study-cues" role="group" aria-label="内容拆解">${['看开场','看承接','看收尾'].map((t,i)=>`<button data-study-cue="${c.cues[i]}" aria-current="${i===0?'step':'false'}"><small>${pad(i+1)}</small><span>${t}</span></button>`).join('')}</div><small class="study-media-note">完整作品 · 保留原声</small></figure><div class="study-analysis"><div class="study-scope"><b>${esc(c.scope)}</b><span>${esc(c.period)}</span></div><div class="study-metrics">${c.metrics.map(m=>`<div><strong>${esc(m.value)}</strong><span>${esc(m.label)}</span></div>`).join('')}</div><div class="study-hook"><span>内容拆解</span><h3>${esc(c.hook)}</h3></div><ol class="study-route">${c.route.map((s,i)=>`<li><small>${pad(i+1)}</small><b>${esc(s)}</b></li>`).join('')}</ol>${c.chart?`<div class="study-chart"><span>${esc(c.chart.label)}</span>${c.chart.items.map(x=>`<div><b>${esc(x.label)}</b><i style="--bar:${x.value/Math.max(...c.chart.items.map(x=>x.value))*100}%"></i><strong>${x.value.toLocaleString('en-US')}</strong></div>`).join('')}</div>`:''}<div class="study-take"><span>专家判断</span><p>${esc(c.insight)}</p></div>${c.context?`<p class="study-context">${esc(c.context)}</p>`:''}<div class="study-test"><span>下一轮，只改一个变量</span><p>${esc(c.test)}</p><small>${esc(c.readout)}</small></div></div></div>`;
+  const video=$('video',el),error=$('.study-error',el),cueButtons=$$('[data-study-cue]',el);
+  video.addEventListener('play',()=>{$$('video').filter(x=>x!==video).forEach(x=>x.pause());error.hidden=true;});
+  video.addEventListener('error',()=>{error.hidden=false;});
+  video.addEventListener('loadeddata',()=>{error.hidden=true;});
+  video.addEventListener('timeupdate',()=>{let on=0;c.cues.forEach((time,i)=>{if(video.currentTime>=time)on=i;});cueButtons.forEach((b,i)=>b.setAttribute('aria-current',i===on?'step':'false'));});
+  const seek=time=>{video.currentTime=time;video.play().catch(()=>{error.hidden=true;});};
+  cueButtons.forEach(b=>b.addEventListener('click',()=>{const time=Number(b.dataset.studyCue);if(video.readyState===0){video.addEventListener('loadedmetadata',()=>seek(time),{once:true});video.load();}else seek(time);}));
+  $('button',error).addEventListener('click',()=>{error.hidden=true;video.load();});
+  return el;
+}
 function paginateDeck(){
   const opening=$('#opening'),coverNodes=[$('.hero-copy',opening),$('.hero-visual',opening)];opening.replaceChildren();opening.className='chapter deck-chapter';makeDeckPage(opening,'opening-page','cover','品牌获得什么',coverNodes);
   const modelRoot=$('#model'),modelNodes=[$('.section-heading',modelRoot),$('.engine-grid',modelRoot),$('.definition',modelRoot),$('.logic-line',modelRoot)];modelRoot.replaceChildren();modelRoot.classList.add('deck-chapter');makeDeckPage(modelRoot,'model-page','model','品牌的内容增长路径',modelNodes);
@@ -73,7 +88,6 @@ function paginateDeck(){
       ['domestic-report','battle',label+' / 代表项目阶段战报',[deckHeading('DOMESTIC / VERIFIED PROJECT SNAPSHOTS','14天，完成1.24万次矩阵发布。','短期内把内容铺开，让品牌持续出现在用户的信息流。'),domesticBattleReport()]],
       ['domestic-cases-page','cases',label+' / 案例集',[h,meta,cases]],
       ['domestic-insight','natural-flow',label+' / 自然流推荐机制',[deckHeading('NATURAL REACH / 推荐如何发生','先让平台看懂，再让对的人看见。','自然流推荐，会根据内容相关性与用户反馈持续调整。'),naturalFlowMechanism()]],
-      ['domestic-methods','domestic-method',label+' / 表达方法',[$('.scene-grid',root)]],
       ['domestic-delivery','roadmap',label+' / 交付与合作',[road,commercial]]
     ];
     if(id==='overseas')pages=[
@@ -93,6 +107,8 @@ function paginateDeck(){
       ['conversion-testing','testing',label+' / 变量测试',[$('.test-intro',root),$('.test-matrix',root)]],
       ['conversion-delivery','roadmap',label+' / 交付与合作',[road,commercial]]
     ];
+    const studyIndex=pages.findIndex(p=>p[0]===id+'-cases-page');
+    pages.splice(studyIndex+1,0,...data.caseStudies.filter(c=>c.scenarioId===id).map(c=>[c.id,'case-study',label+' / 案例研读',[caseStudyPanel(c)]]));
     // Detach, never clone, so IDs, native media and handlers remain unique.
     const holding=document.createDocumentFragment();pages.forEach(p=>p[3].filter(Boolean).forEach(el=>holding.append(el)));root.replaceChildren();root.classList.add('deck-chapter');makeDeckPage(root,id+'-chapter','chapter-intro',label+' / 章节引导',[sceneChapter(id)]);const gallery=data.scenarioGalleries[id];makeDeckPage(root,id+'-work-wall','gallery',label+' / 精选作品集',[deckHeading(gallery.kicker,gallery.title,gallery.lead),makeScenarioGallery(id)]);pages.forEach(p=>makeDeckPage(root,...p));
   }
@@ -116,7 +132,7 @@ function paginateDeck(){
 function goDeck(i){const n=Math.max(0,Math.min(deckPages.length-1,i));setDeckPosition(n);history.replaceState(null,'','#'+deckPages[n].id);window.scrollTo({top:0,behavior:'instant'});}
 function setDeckPosition(i){deckActive=i;deckPages.forEach((p,j)=>{p.el.classList.toggle('is-current',j===i);if(j!==i)$$('video',p.el).forEach(v=>v.pause());});const sheet=$('.deck-sheet',deckPages[i].el),width=sheet.getBoundingClientRect().width;sheet.style.setProperty('--deck-scale',String(width/1600));document.documentElement.style.setProperty('--deck-sheet-height',width*9/16+'px');document.documentElement.style.setProperty('--deck-sheet-width',width+'px');$('#deck-position').textContent=pad(i+1)+' / '+pad(deckPages.length);$('#deck-prev').disabled=i===0;$('#deck-next').disabled=i===deckPages.length-1;$$('.desktop-nav a').forEach(a=>a.classList.toggle('current',a.hash==='#'+deckPages[i].el.parentElement.id));syncWallPreviews();updateCatalogCurrent();}
 const catalogSpecs=[
- ['opening-page','品牌如何获得增长','all','让产品，持续出现在用户眼前。','价值主张'],
+ ['opening-page','品牌如何获得增长','all','把产品，融进用户每天刷的内容。','价值主张'],
  ['model-page','品牌如何获得增长','methods','找准内容增长方向，建起品牌自己的社媒矩阵。','社媒矩阵 × 电商内容迭代'],
  ['matrix-script-bridge','品牌如何获得增长','methods','一轮矩阵，留下两份价值。','品牌声量 + 转化脚本资产'],
  ['matrix-work-wall','品牌如何获得增长','cases','六个作品窗口，看内容如何跨行业展开。','完整版视频墙'],
@@ -126,7 +142,6 @@ const catalogSpecs=[
  ['domestic-report','01 国内UGC矩阵','cases','14天，完成1.24万次矩阵发布。','双平台阶段战报'],
  ['domestic-cases-page','01 国内UGC矩阵','cases','一批素材，持续供给多个账号。','案例集与真实作品'],
  ['domestic-insight','01 国内UGC矩阵','methods','先让平台看懂，再让对的人看见。','内容信号 / 兴趣匹配 / 用户反馈'],
- ['domestic-methods','01 国内UGC矩阵','methods','从一条作品，拆出可复用的内容结构。','产品 / 门店 / 热点'],
  ['domestic-delivery','01 国内UGC矩阵','delivery','每一步都有交付物，每一轮接回反馈。','交付路线与合作'],
  ['overseas-chapter','02 海外UGC矩阵','all','同一个产品，在不同国家各自讲通。','章节引导'],
  ['overseas-work-wall','02 海外UGC矩阵','cases','不同国家，都有自己的内容语感。','多客户 / 多内容形式 / 六支完整视频'],
@@ -151,13 +166,17 @@ const catalogSpecs=[
  ['team-roles','合作与AI Native团队','delivery','AI把选择做多，专业团队把交付做稳。','团队与责任'],
  ['closing-page','合作与AI Native团队','delivery','带一个品牌任务，从第一批内容开始。','准备需求与下一步']
 ];
+for(const scenario of ['domestic','overseas','conversion']){
+  const anchor=catalogSpecs.findIndex(s=>s[0]===scenario+'-cases-page'),group=catalogSpecs[anchor][1];
+  catalogSpecs.splice(anchor+1,0,...data.caseStudies.filter(c=>c.scenarioId===scenario).map(c=>[c.id,group,'cases',c.title.replace(/\n/g,''),c.method]));
+}
 let catalogFilter='all';
 function setupCatalog(){const aside=$('#contents');aside.className='viewer-catalog';aside.setAttribute('role','complementary');aside.removeAttribute('aria-modal');const groups=[...new Set(catalogSpecs.map(s=>s[1]))];aside.innerHTML=`<header><h2 id="contents-title">演示目录</h2><button data-close="contents" aria-label="返回演示">×</button></header><p class="catalog-summary"><span>${deckPages.length}</span><span> 页 · 三个核心场景 · </span><span>${media.works.length}</span><span> 段完整作品</span></p><label class="catalog-search"><input id="catalog-search" type="search" aria-label="搜索页面、案例或方法" placeholder="搜索页面、案例或方法"></label><div class="catalog-filters" role="group" aria-label="按内容筛选">${[['all','全部'],['cases','案例'],['methods','方法'],['delivery','交付']].map(([k,t])=>`<button data-catalog-filter="${k}" aria-pressed="${k==='all'}">${t}</button>`).join('')}</div><nav class="catalog-list" aria-label="逐页目录">${groups.map(g=>`<section class="catalog-group"><h3>${g}</h3>${catalogSpecs.filter(s=>s[1]===g).map(s=>`<a class="catalog-item" href="#${s[0]}" data-catalog-kind="${s[2]}"><small>${pad(deckPages.findIndex(p=>p.id===s[0])+1)}</small><div><b>${s[3]}</b><span>${s[4]}</span></div></a>`).join('')}</section>`).join('')}</nav><p class="catalog-empty" hidden>没有匹配页面，试试“案例”“国家”或“脚本”。</p><p class="catalog-footer">选择页面直接进入 · Esc返回演示</p>`;$('#catalog-search').addEventListener('input',filterCatalog);aside.addEventListener('click',e=>{const b=e.target.closest('[data-catalog-filter]');if(!b)return;catalogFilter=b.dataset.catalogFilter;$$('[data-catalog-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));filterCatalog();});updateCatalogCurrent();}
 function filterCatalog(){const q=$('#catalog-search').value.trim().toLocaleLowerCase();let count=0;$$('.catalog-item').forEach(a=>{const p=deckPages.find(x=>'#'+x.id===a.hash),text=(a.textContent+' '+(p?.el.textContent||'')).toLocaleLowerCase(),show=(!q||text.includes(q))&&(catalogFilter==='all'||a.dataset.catalogKind===catalogFilter);a.hidden=!show;if(show)count++;});$$('.catalog-group').forEach(g=>g.hidden=!$$('.catalog-item',g).some(a=>!a.hidden));$('.catalog-empty').hidden=count>0;}
 function updateCatalogCurrent(){$$('.catalog-item').forEach(a=>{const on=a.hash==='#'+deckPages[deckActive]?.id;a.classList.toggle('current',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}
 paginateDeck();setDeckPosition(0);setCpmCountry('VN');document.addEventListener('click',e=>{const c=e.target.closest('[data-cpm-country]');if(c){setCpmCountry(c.dataset.cpmCountry);cpmTourHoldUntil=Date.now()+12000;syncCpmTour();}});
 $('#deck-prev').onclick=()=>goDeck(deckActive-1);$('#deck-next').onclick=()=>goDeck(deckActive+1);
-function syncHashToDeck(){const hash=location.hash.slice(1),id=['domestic','overseas','conversion'].includes(hash)?hash+'-chapter':hash,target=document.getElementById(id);if(!target)return;const frame=target.closest('.deck-frame')||$('.deck-frame',target);const i=deckPages.findIndex(p=>p.el===frame);if(i>=0){setDeckPosition(i);window.scrollTo({top:0,behavior:'instant'});}}
+function syncHashToDeck(){const hash=location.hash.slice(1),redirects={'conversion-asmr':'conversion-offer','conversion-story':'conversion-household','domestic-methods':'domestic-delivery'},id=redirects[hash]||(['domestic','overseas','conversion'].includes(hash)?hash+'-chapter':hash),target=document.getElementById(id);if(!target)return;const frame=target.closest('.deck-frame')||$('.deck-frame',target);const i=deckPages.findIndex(p=>p.el===frame);if(i>=0){setDeckPosition(i);window.scrollTo({top:0,behavior:'instant'});}}
 addEventListener('hashchange',syncHashToDeck);addEventListener('resize',()=>requestAnimationFrame(()=>setDeckPosition(deckActive)));
 $('.deck-navigation').addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();goDeck(deckActive+(e.key==='ArrowRight'?1:-1));}});
 
